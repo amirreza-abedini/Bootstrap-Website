@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Our Team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Coder | Learn web development</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1>Coder</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="transition nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./courses.html">Introduction</a></li>
+                            <li><a class="dropdown-item" href="./courses.html#front-end">Front End</a></li>
+                            <li><a class="dropdown-item" href="./courses.html#back-end">Back End</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./FAQs.html">FAQs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </div>
+    </nav>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="latest">
+                            <label class="form-check-label" for="latest">Notify me for the classes</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userMail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userMail" aria-describedby="emailHelp"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="start-pos position-fixed bottom-0 end-0 p-4">
+        <i class="btn btn-primary d-none fas fa-chevron-up p-2 rounded" id="btn-start"></i>
+    </div>
+
+    <section class="p-5">
+        <div class="container">
+            <div class="d-sm-flex justify-content-between align-items-center">
+                <div class="w-100">
+                    <h1 class="py-4 text-center text-sm-start">About Our Work</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minus ipsam voluptatum
+                        repudiandae, provident enim dolor consequatur vitae maiores dicta. Magnam, fugiat et nesciunt
+                        omnis id beatae? Beatae cupiditate, iure quasi quia sapiente nesciunt impedit accusamus
+                        incidunt, excepturi eum eveniet voluptatibus dicta voluptate ex. Praesentium voluptatum
+                        reiciendis rem minima quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellat doloribus corrupti harum id blanditiis quae, ex perspiciatis consequuntur totam veniam
+                        error at voluptate autem aliquid nobis asperiores voluptatum tempora iste nesciunt alias quam
+                        quibusdam, reprehenderit perferendis? Quas porro quod error natus eius? Perspiciatis eum sint
+                        eveniet obcaecati eius unde explicabo.</p>
+                </div>
+                <img class="w-50 d-none d-sm-block" src="../images/about.jpg" alt="about">
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <h2 class="text-center py-4">Our Team</h2>
+            <div class="row gap-3">
+                <div class="card col-md p-0">
+                    <img class="img-fluid mentor" src="../images/jos.jpg" alt="">
+                    <p class="p-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eligendi
+                        consequatur quibusdam
+                        assumenda architecto iusto perferendis, nemo veniam mollitia numquam ipsam at, ab fuga, sint
+                        deleniti. Labore architecto tempore illo modi aliquam est facere! Officia esse pariatur,
+                        suscipit cupiditate fuga illo. Laudantium animi, quo nam magnam debitis sequi ipsa cupiditate,
+                        sapiente consequatur eaque nulla tenetur reiciendis dicta nisi incidunt rerum iure asperiores
+                        facilis dignissimos voluptatum quos exercitationem impedit! Tempore, vero.</p>
+                </div>
+                <div class="card col-md p-0">
+                    <img class="img-fluid mentor" src="../images/linda.jpg" alt="">
+                    <p class="p-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reprehenderit
+                        provident unde eaque
+                        distinctio. Sapiente error rem non eum, quas, soluta possimus repellat dolorem maxime culpa
+                        officiis
+                        impedit delectus amet, ullam aliquam. Expedita atque illo rerum non quae. Sunt aperiam quod at
+                        nam
+                        corrupti exercitationem voluptatibus sequi cupiditate sit, sapiente optio aliquam voluptates
+                        obcaecati dolorem aliquid repellendus aut voluptatem saepe asperiores, impedit dolorum non
+                        officia?
+                        Nostrum sunt voluptatibus eveniet. Tempora!</p>
+                </div>
+                <div class="card col-md p-0">
+                    <img class="img-fluid mentor" src="../images/ian.jpg" alt="">
+                    <p class="p-3"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem adipisci
+                        similique odio rerum
+                        ex minus voluptates, magnam debitis asperiores fugit omnis voluptate quidem, impedit pariatur
+                        eius
+                        inventore reiciendis alias doloribus aspernatur. Deleniti nam explicabo mollitia vero expedita
+                        veritatis perspiciatis iure autem labore, quod ex laborum delectus magnam voluptas quisquam
+                        voluptate consequuntur ipsum minus omnis dolor quidem animi amet! Quo perspiciatis labore a
+                        expedita
+                        voluptas architecto, explicabo sit impedit fugiat iste!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer class="bg-dark">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="text-light text-center">&copy; 2021 Coder, Inc</p>
+                </div>
+                <div>
+                    <ul class="d-flex ms-auto">
+                        <a class="nav-link link-light" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link link-light" href="./courses.html">Courses</a>
+                        <a class="nav-link link-light" href="./FAQs.html">FAQs</a>
+                        <a class="nav-link link-light" href="./About.html">About</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="../app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.skill.card {
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.skill.card:hover {
+    background-color: #0D6efd;
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.7);
+    transform: scale(1.05);
+}
+
+.text-react {
+    color: #61DBFB;
+}
+
+.transition {
+    transition: .5s ease-in-out;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.html5 {
+    color:#F06529;
+}
+
+.css3 {
+    color: #0277BD;
+}
+
+.bootstrap5 {
+    background-color: blueviolet;
+    color: white;
+    border-radius: .3em;
+    margin-right: 5px;
+}
+
+.js {
+    color: #f0db4f ;
+}
+
+.php {
+    color: #787cb5;
+}
+
+.react {
+    color: #61DBFB;
+}
+
+.vue {
+    color: #42b883;
+}
+
+.angular {
+    color: #dd1b16;
+}
+
+.sass {
+    color: #cc6899;
+}
+
+.course-icon {
+    width: 34px;
+}
+
+.card{
+    overflow: hidden;
+    position: relative;
+}
+
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 150px;
+    height: 34px;
+    background: linear-gradient(45deg ,rgb(245, 38, 38), rgb(107, 0, 128) );
+    transform: rotate(45deg);
+}
+
+.css .ribbon {
+    top: 19px;
+    right: -52px;
+}
+
+.stick {
+    position: fixed;
+    width: 100%; 
+    z-index: 100;
+}
+
+.start-pos {
+    cursor: pointer;
+    z-index: 100;
+}
+
+.paddingY-3 {
+    padding: 1.5rem;
+}
+
+.mentor {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.modal-open {
+    overflow: scroll;
+}

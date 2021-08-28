@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Front End And Back End Courses">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>App</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1>Coder</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="transition nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#intro">Introduction</a></li>
+                            <li><a class="dropdown-item" href="#front-end">Front End</a></li>
+                            <li><a class="dropdown-item" href="#back-end">Back End</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./FAQs.html">FAQs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./About.html">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </div>
+    </nav>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="latest">
+                            <label class="form-check-label" for="latest">Notify me for the classes</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userMail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userMail" aria-describedby="emailHelp"
+                                required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="start-pos position-fixed bottom-0 end-0 p-4">
+        <i class="btn btn-primary d-none fas fa-chevron-up p-2 rounded" id="btn-start"></i>
+    </div>
+
+    <!-- Introduction -->
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="text-center bg-dark" id="intro">
+                <h1 class="pb-2">Introduction</h1>
+                <p class="justify lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quo
+                    praesentium esse
+                    magnam similique labore aspernatur neque quam vero minima hic perspiciatis odio culpa ea atque, aut
+                    maxime blanditiis beatae eaque placeat! Eveniet eaque ipsa sunt, excepturi quod exercitationem odit
+                    suscipit nemo assumenda voluptatum voluptate dignissimos, illo libero ab optio Lorem ipsum dolor,
+                    sit amet consectetur adipisicing elit. Cum rem, doloremque, quisquam temporibus quas fugiat
+                    quibusdam animi neque quidem recusandae sequi. Dolor iste similique reprehenderit corrupti rem
+                    inventore necessitatibus quae, sapiente atque, voluptatem ipsum maiores. Aliquam temporibus atque
+                    corporis nisi esse nobis, a sit soluta quibusdam nesciunt? Eos, possimus
+                    veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quaerat facere ullam neque
+                    eum minima delectus pariatur earum?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    deserunt libero aut eligendi voluptatum ab quisquam doloribus laudantium repudiandae porro
+                    perspiciatis voluptates distinctio tempore ea neque eveniet nemo, corporis atque possimus quo enim
+                    earum magni facere. A explicabo voluptates culpa, atque ipsum mollitia, qui vitae, tempore illum eum
+                    laborum! Natus ipsum, error reprehenderit molestias totam unde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section class="p-5" id="front-end">
+        <div class="container">
+            <div>
+                <h2 class="fw-bold mt-4 mb-5 text-center">Front End</h2>
+                <div class="row gap-3">
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><i class="html5 px-2 fab fa-html5"></i>HTML 5</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">1 month</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">200$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">mondays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                    </div>
+                    <div class="css card col-md py-3">
+                        <div>
+                            <h3><i class="css3 px-2 fab fa-css3"></i>CSS 3</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/9/5</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">500$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">sundays - wednesdays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                        <div class="discount-ribbon">
+                            <span class="ribbon text-center pe-3 pt-1  fw-bold text-light">20% OFF</span>
+                        </div>
+                    </div>
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bootstrap5 bi bi-bootstrap" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z" />
+                                    <path
+                                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z" />
+                                </svg>Bootstrap 5</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">100$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">tusedays - fridays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                    </div>
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><i class="js px-2 fab fa-js"></i>JavaScript</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal"><del>700$</del> 500$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">saturdays - sundays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                        <div class="discount-ribbon">
+                            <span class="ribbon text-center pe-3 pt-1  fw-bold text-light">20% OFF</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row gap-3">
+                            <div class="card col-md py-3">
+                                <div>
+                                    <h3><i class="react px-2 fab fa-react"></i>ReactJS</h3>
+                                </div>
+
+                                <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                                <h4 class="fs-5">duration: <small class="fw-normal">1 month</small></h4>
+                                <h4 class="fs-5">price: <small class="fw-normal">200$</small></h4>
+                                <h4 class="fs-5">day: <small class="fw-normal">mondays</small></h4>
+                                <div class="d-flex py-4">
+                                    <button class="btn me-3 btn-outline-primary">Details</button>
+                                    <button class="btn btn-outline-primary">Register</button>
+                                </div>
+                            </div>
+                            <div class="css card col-md py-3">
+                                <div>
+                                    <h3><i class="vue px-2 fab fa-vuejs"></i>Vue.js</h3>
+                                </div>
+
+                                <h4 class="fs-5">start : <small class="fw-normal">2021/9/5</small></h4>
+                                <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                                <h4 class="fs-5">price: <small class="fw-normal">500$</small></h4>
+                                <h4 class="fs-5">day: <small class="fw-normal">sundays - wednesdays</small></h4>
+                                <div class="d-flex py-4">
+                                    <button class="btn me-3 btn-outline-primary">Details</button>
+                                    <button class="btn btn-outline-primary">Register</button>
+                                </div>
+                                <div class="discount-ribbon">
+                                    <span class="ribbon text-center pe-3 pt-1  fw-bold text-light">50% OFF</span>
+                                </div>
+                            </div>
+                            <div class="card col-md py-3">
+                                <div>
+                                    <h3><i class="angular fab fa-angular"></i> Angular</h3>
+                                </div>
+
+                                <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                                <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                                <h4 class="fs-5">price: <small class="fw-normal">100$</small></h4>
+                                <h4 class="fs-5">day: <small class="fw-normal">tusedays - fridays</small></h4>
+                                <div class="d-flex py-4">
+                                    <button class="btn me-3 btn-outline-primary">Details</button>
+                                    <button class="btn btn-outline-primary">Register</button>
+                                </div>
+                            </div>
+                            <div class="card col-md py-3">
+                                <div>
+                                    <h3><i class="sass px-2 fab fa-sass"></i>Sass</h3>
+                                </div>
+
+                                <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                                <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                                <h4 class="fs-5">price: <small class="fw-normal"><del>700$</del> 500$</small></h4>
+                                <h4 class="fs-5">day: <small class="fw-normal">saturdays - sundays</small></h4>
+                                <div class="d-flex py-4">
+                                    <button class="btn me-3 btn-outline-primary">Details</button>
+                                    <button class="btn btn-outline-primary">Register</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section class="p-5" id="back-end">
+        <div class="container">
+            <div>
+                <h2 class="fw-bold mt-4 mb-5 text-center">Back End</h2>
+                <div class="row gap-3">
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><i class="php px-2 fab fa-php"></i>PHP</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">1 month</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">200$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">mondays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                    </div>
+                    <div class="css card col-md py-3">
+                        <div>
+                            <h3><img class="course-icon" src="../images/python.png" alt=""> Python</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/9/5</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">500$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">sundays - wednesdays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                        <div class="discount-ribbon">
+                            <span class="ribbon text-center pe-3 pt-1  fw-bold text-light">20% OFF</span>
+                        </div>
+                    </div>
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><img class="course-icon" src="../images/node.png" alt=""> NodeJS</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal">100$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">tusedays - fridays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                    </div>
+                    <div class="card col-md py-3">
+                        <div>
+                            <h3><i class="js px-2 fab fa-js"></i>JavaScript</h3>
+                        </div>
+
+                        <h4 class="fs-5">start : <small class="fw-normal">2021/8/4</small></h4>
+                        <h4 class="fs-5">duration: <small class="fw-normal">3 months</small></h4>
+                        <h4 class="fs-5">price: <small class="fw-normal"><del>700$</del> 500$</small></h4>
+                        <h4 class="fs-5">day: <small class="fw-normal">saturdays - sundays</small></h4>
+                        <div class="d-flex py-4">
+                            <button class="btn me-3 btn-outline-primary">Details</button>
+                            <button class="btn btn-outline-primary">Register</button>
+                        </div>
+                        <div class="discount-ribbon">
+                            <span class="ribbon text-center pe-3 pt-1  fw-bold text-light">20% OFF</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer class="bg-dark">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="text-light text-center">&copy; 2021 Coder, Inc</p>
+                </div>
+                <div>
+                    <ul class="d-flex ms-auto">
+                        <a class="nav-link link-light" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link link-light" href="#">Courses</a>
+                        <a class="nav-link link-light" href="./FAQs.html">FAQs</a>
+                        <a class="nav-link link-light" href="./About.html">About</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="../app.js"></script>
+</body>
+
+</html>

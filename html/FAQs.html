@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freaquently Asked Questions">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>App</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1>Coder</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="transition nav-link dropdown-toggle " href="#" id="navbarDarkDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./courses.html">Introduction</a></li>
+                            <li><a class="dropdown-item" href="./courses.html#front-end">Front End</a></li>
+                            <li><a class="dropdown-item" href="./courses.html#back-end">Back End</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="#">FAQs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./About.html">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="btn btn-primary btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+            <button class="btn btn-primary btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+
+        </div>
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastname" class="form-label">Lastname</label>
+                                <input type="text" class="form-control" id="lastname" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="userMail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="userMail" aria-describedby="emailHelp"
+                                    required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="latest">
+                                <label class="form-check-label" for="latest">Notify me for the classes</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="user" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="user" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="start-pos position-fixed bottom-0 end-0 p-4">
+        <i class="btn btn-primary d-none fas fa-chevron-up p-2 rounded" id="btn-start"></i>
+    </div>
+
+    <!-- FAQs -->
+    <section class="p-5">
+        <div class="container">
+            <h1 class="text-center py-4">Freaquently Asked Questions</h1>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            How can i attend the class ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, omnis quam nemo autem
+                            consequuntur tenetur totam minima repellendus ipsum in rerum fugit qui optio magni. Corrupti
+                            aliquam ipsa commodi amet!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            How can i pay for the class ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ducimus, incidunt minus
+                            debitis deserunt excepturi cumque est aperiam, cupiditate doloribus quos illo doloremque
+                            alias nesciunt consequuntur saepe illum fuga provident?
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            can i really get a job after this course ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, placeat. Velit
+                            exercitationem amet iure libero, aperiam, aliquam maiores expedita facere quaerat debitis
+                            vel obcaecati ab. Dolorem quidem rem ab eum odit tempore reiciendis neque nobis
+                            reprehenderit cum, voluptatibus iusto repellat.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFour">
+                            In what order should i register for classes ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem quam illum
+                            dolores, blanditiis sint quo reiciendis perferendis itaque placeat!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFive">
+                            Can i get a discount if i am a student ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFive">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem quam illum
+                            dolores, blanditiis sint quo reiciendis perferendis itaque placeat! Lorem, ipsum dolor sit
+                            amet consectetur adipisicing elit. Eligendi aliquid dicta quas culpa aspernatur minima?
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, ea?
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingten">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseten" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseten">
+                            How long is the learning process ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseten" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingten">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem quam illum
+                            dolores, blanditiis sint quo reiciendis perferendis itaque placeat! Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Dicta totam sed alias quae necessitatibus ipsum
+                            laboriosam consectetur expedita eos laborum minima quam harum voluptatum atque, earum
+                            consequatur animi. Laudantium, ex!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseSix">
+                            Who are the mentors in this classes ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingSix">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores natus suscipit vel officiis
+                            eaque! Magnam, in? Inventore expedita voluptas explicabo repellat adipisci quisquam aut,
+                            quas laudantium delectus, magni aperiam sunt tempore voluptate dolore officia itaque veniam
+                            eius voluptatum molestiae magnam rerum dolores earum! Amet nisi aut culpa repellat quos
+                            vero!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseSeven">
+                            Can i cancel my register for classes ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingSeven">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem quam illum
+                            dolores, blanditiis sint quo reiciendis perferendis itaque placeat! Lorem ipsum dolor sit,
+                            amet consectetur adipisicing elit. Labore consequuntur quaerat quas culpa autem
+                            voluptatibus, sed ullam fugit error non!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseEight">
+                            How can i get support ?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingEight">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem quam illum
+                            dolores, blanditiis sint quo reiciendis perferendis itaque placeat! Lorem ipsum, dolor sit
+                            amet consectetur adipisicing elit. Incidunt, culpa!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer class="bg-dark">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="text-light text-center">&copy; 2021 Coder, Inc</p>
+                </div>
+                <div>
+                    <ul class="d-flex ms-auto">
+                        <a class="nav-link link-light" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link link-light" href="./courses.html">Courses</a>
+                        <a class="nav-link link-light" href="#">FAQs</a>
+                        <a class="nav-link link-light" href="./About.html">About</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

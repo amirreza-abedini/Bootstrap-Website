@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Web Development">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Coder | Learn web development</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1>Coder</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li>
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="transition nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./html/courses.html">Introduction</a></li>
+                            <li><a class="dropdown-item" href="./html/courses.html#front-end">Front End</a></li>
+                            <li><a class="dropdown-item" href="./html/courses.html#back-end">Back End</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./html/FAQs.html">FAQs</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./html/About.html">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#registerModal" id="reg">Register</button>
+            <button class="btn btn-primary mx-2 d-none d-lg-block user-account-btns" type="button"
+                data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </div>
+    </nav>
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true"
+        data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastname" class="form-label">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userMail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userMail" aria-describedby="emailHelp"
+                                required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="latest">
+                            <label class="form-check-label" for="latest">Notify me for the classes</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="start-pos position-fixed bottom-0 end-0 p-4">
+        <i class="btn btn-primary d-none fas fa-chevron-up p-2 rounded" id="btn-start"></i>
+    </div>
+
+
+    <!-- showcase -->
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex justify-content-between align-items-center">
+                <div class="pe-5 pe-xlg-0">
+                    <h1>Become A <span class="text-warning">Web Developer</span></h1>
+                    <p class="lead my-4">we help you start your coding career and build countless of projects with the
+                        power of HTML,
+                        CSS and
+                        JavaScript</p>
+                    <button class="btn btn-lg btn-primary">Start Now</button>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="./images/StartCoding.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="p-5">
+        <div class="container">
+            <h2 class="mb-5">Skills You'll Learn</h2>
+            <div class="row gap-3 gap-lg-0 my-3">
+                <div class="col-lg">
+                    <div class="skill card p-3 mb-3 h-100">
+                        <h3 class="fw-normal">Design</h3>
+                        <p>You'll learn to design and customize your UI and UX based on client needs and also you will
+                            have
+                            the ability to make the best design for your personal websites.</p>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="skill card p-3 mb-3 h-100">
+                        <h3 class="fw-normal">Digital Roadmap</h3>
+                        <p>Building Products at first glance can be quite complex
+                            but with practice and creativity you can build almost everything and
+                            also you can make great things happen.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="skill card p-3 mb-3 h-100">
+                        <h3 class="fw-normal">Technical Architecture</h3>
+                        <p>
+                            What technical architecture is right for your digital product? We elaborate and teach you
+                            how to prevent the most common mistakes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div class="skill card p-3 h-100">
+                        <h3 class="fw-normal">Budget forecasting</h3>
+                        <p>
+                            Why development & testing are crucial while being scary at the same time. If you understand
+                            how to test, you'll increase product quality and then you can build many
+                            projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Fundementals -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md">
+                    <img class="img-fluid" src="./images/fundamentals.svg" alt="">
+                </div>
+                <div class="col-md p-5">
+                    <h2>Learn The Fundementals</h2>
+                    <p class="lh-md lead">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed fugiat cumque ex dicta perferendis
+                        laudantium totam, iure temporibus laboriosam dolorem quaerat, aliquid ea sit. Corrupti?
+                    </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero vitae temporibus sapiente a
+                        exercitationem? Animi modi voluptatum temporibus ut dolore reiciendis perspiciatis iste porro
+                        culpa harum blanditiis omnis odio amet voluptas impedit eius dicta nam corrupti necessitatibus
+                        voluptates distinctio iure, libero alias incidunt. Illum sit, officiis veritatis repellendus
+                        perspiciatis ea?</p>
+                    <a class="btn btn-light mt-3" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg> Read more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md p-5">
+                    <h2>Learn <span class="text-react">React</span> </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aspernatur neque ipsum quaerat.
+                        Enim totam possimus aut quaerat aperiam rerum porro ea, iste, quibusdam quisquam qui aliquam
+                        reiciendis asperiores hic.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eligendi facere praesentium quis
+                        nihil corrupti consequuntur iste. Molestias quasi repellat ullam distinctio ducimus sit dolores
+                        neque voluptatibus, consequatur optio delectus voluptate commodi illum culpa sapiente. Modi,
+                        magni at? Obcaecati, adipisci. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Tempore, quos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nisi.</p>
+                    <a class="btn btn-primary mt-3" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg> Read more
+                    </a>
+                </div>
+                <div class="col-md">
+                    <img class="img-fluid" src="./images/react.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <h2>Get Your First Job</h2>
+            <p class="lead">
+                It is the best practice to get a job after learning our web disign course to become aware of the up and
+                downs
+                of your
+                skill and become experienced for your furture jobs so in coder we ensure our students that they get a
+                job
+                after
+                learning all
+                the courses needed for a
+                job requirement.
+            </p>
+            <div class="logos bg-light p-5 text-center">
+                <h3 class="text-center fw-normal pb-3">Hired students by the most popular companies</h3>
+                <div class="row justify-content-end align-items-center pt-lg-5 ">
+                    <div class="col-md col-6 col-lg-0">
+                        <img class="img-fluid w-50" src="./logo-images/logo1.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo2.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo3.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo4.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo5.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo6.png" alt="">
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center pt-lg-5">
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo7.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo8.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo9.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo10.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo11.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo12.png" alt="">
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center pt-lg-5">
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo13.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo14.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo15.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo8.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo10.png" alt="">
+                    </div>
+                    <div class="col-md col-6 col-lg-0 my-3">
+                        <img class="img-fluid w-50" src="./logo-images/logo7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5 text-center gap-3">
+                <div class="card col-md">
+                    <h3 class="fw-normal">Applied</h3>
+                    <h2 class="fw-bold">6000+</h2>
+                </div>
+                <div class="card col-md">
+                    <h3 class="fw-normal">Graduates</h3>
+                    <h2 class="fw-bold">5000+</h2>
+                </div>
+                <div class="card col-md">
+                    <h3 class="fw-normal">Hired</h3>
+                    <h2 class="fw-bold">1000+</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <Footer class="bg-dark">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="text-light text-center">&copy; 2021 Coder, Inc</p>
+                </div>
+                <div>
+                    <ul class="d-flex ms-auto">
+                        <a class="nav-link link-light" aria-current="page" href="#">Home</a>
+                        <a class="nav-link link-light" href="./html/courses.html">Courses</a>
+                        <a class="nav-link link-light" href="./html/FAQs.html">FAQs</a>
+                        <a class="nav-link link-light" href="./html/About.html">About</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </Footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
