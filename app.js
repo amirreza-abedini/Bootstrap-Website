@@ -55,7 +55,7 @@ window.onscroll = () => {
     reset();
     resetBtn();
   }
-  if (document.body.clientWidth < 500) {
+  if (document.body.clientWidth < 2000) {
     console.log("mobile");
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       btnStart.classList.add("d-none");

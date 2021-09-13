@@ -114,3 +114,7 @@ body {
 .modal-open {
     overflow: scroll;
 }
+
+@media(max-width: 400px) {
+
+}
