@@ -29,13 +29,11 @@ const accountStyle = () => {
     elem.addEventListener("click", () => {
       document.body.style.overflow = "auto";
       document.body.style.paddingRight = "0";
-      console.log("hello");
     });
   });
 };
 
 window.onscroll = () => {
-  console.log(document.body.scrollTo());
   let scrollPos = window.scrollTop;
   if (
     document.body.scrollTop > 130 ||
@@ -56,7 +54,6 @@ window.onscroll = () => {
     resetBtn();
   }
   if (document.body.clientWidth < 2000) {
-    console.log("mobile");
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       btnStart.classList.add("d-none");
     }
